@@ -11,10 +11,6 @@
 <header class="site-header">
     <div class="container">
         <a class="logo" href="index.html">Media DB</a>
-        <nav class="top-nav">
-            <a href="index.html">Library</a>
-            <a href="season1.html">Season overview</a>
-        </nav>
     </div>
 </header>
 
@@ -105,6 +101,17 @@ function renderSeriesList() {
    RECENT WATCHED SYSTEM
 ========================= */
 function attachWatchHandlers() {
+    // Card click - navigate to season page
+    document.querySelectorAll('.series-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't trigger if clicking a link
+            if (e.target.closest('a')) return;
+            
+            const id = card.dataset.id;
+            window.location.href = `season1.html?id=${id}`;
+        });
+    });
+
     document.querySelectorAll('.watch-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();

@@ -11,10 +11,7 @@
 <header class="site-header">
     <div class="container">
         <a class="logo" href="index.html">Media DB</a>
-        <nav class="top-nav">
-            <a href="index.html">Library</a>
-            <a id="seasonLink" href="season1.html">Season overview</a>
-        </nav>
+        <nav class="top-nav"></nav>
     </div>
 </header>
 
@@ -26,7 +23,10 @@
         <div class="episode-header">
             <div class="title-controls">
                 <button id="prevButton" class="nav-button">← Previous</button>
-                <h2 id="currentTitle" class="episode-title-clickable">Loading...</h2>
+                <div class="title-column">
+                    <h3 id="seriesTitle" class="series-title-clickable">Loading...</h3>
+                    <h2 id="episodeTitle" class="episode-title-clickable">Loading...</h2>
+                </div>
                 <button id="nextButton" class="nav-button">Next →</button>
             </div>
             
@@ -44,6 +44,7 @@
         </div>
 
         <iframe id="videoPlayer" width="100%" height="500" style="border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <video id="videoPlayerDirect" width="100%" height="500" style="display:none;background:#000" controls playsinline></video>
 
         <div id="playerFallback" style="display:none;margin-top:10px">
             <span>Unable to load video.</span>
@@ -99,20 +100,35 @@ let currentLanguage = "jp";
    ELEMENTS
 ========================= */
 const player = document.getElementById("videoPlayer");
-const titleEl = document.getElementById("currentTitle");
+const playerDirect = document.getElementById("videoPlayerDirect");
+const seriesTitleEl = document.getElementById("seriesTitle");
+const episodeTitleEl = document.getElementById("episodeTitle");
 const listEl = document.getElementById("videoList");
 const externalLink = document.getElementById("externalLink");
 const fallback = document.getElementById("playerFallback");
 const languageSelect = document.getElementById("languageSelect");
 
 /* =========================
-   BUILD GOOGLE DRIVE IFRAME
+   BUILD GOOGLE DRIVE URLS
 ========================= */
 function buildIframeUrl(index) {
     const videoId = videoIds[currentLanguage]?.[index];
     if (!videoId) return "";
     
     return `https://drive.google.com/file/d/${videoId}/preview?autoplay=1`;
+}
+
+function buildDirectUrl(index) {
+    const videoId = videoIds[currentLanguage]?.[index];
+    if (!videoId) return "";
+    // Attempt direct stream (may be blocked by Drive depending on permissions / size)
+    return `https://drive.google.com/uc?export=download&id=${videoId}`;
+}
+
+function buildDriveViewUrl(index) {
+    const videoId = videoIds[currentLanguage]?.[index];
+    if (!videoId) return "";
+    return `https://drive.google.com/file/d/${videoId}/view`;
 }
 
 /* =========================
@@ -125,18 +141,54 @@ function loadEpisode(index, autoplay = true) {
 
     if (!ep) return;
 
-    titleEl.textContent = ep;
+    seriesTitleEl.textContent = series.subtitle || series.title;
+    episodeTitleEl.textContent = ep;
 
     const iframeUrl = buildIframeUrl(index);
+    const directUrl = buildDirectUrl(index);
+    const viewUrl = buildDriveViewUrl(index);
 
     if (!iframeUrl) {
         fallback.style.display = "block";
         player.src = "";
+        playerDirect.removeAttribute("src");
         return;
     }
 
-    player.src = iframeUrl;
-    externalLink.href = iframeUrl;
+    // Prefer direct <video> first; if it errors, fall back to iframe preview.
+    fallback.style.display = "none";
+    externalLink.href = viewUrl || iframeUrl;
+
+    // Reset both players to avoid audio overlap / stale loads
+    player.src = "";
+    playerDirect.pause();
+    playerDirect.removeAttribute("src");
+    playerDirect.load();
+
+    if (directUrl) {
+        playerDirect.style.display = "block";
+        player.style.display = "none";
+        playerDirect.src = directUrl;
+        playerDirect.load();
+
+        if (autoplay) {
+            playerDirect.play().catch(() => {
+                // Autoplay may be blocked; user can press play.
+            });
+        }
+    } else {
+        playerDirect.style.display = "none";
+        player.style.display = "block";
+        player.src = iframeUrl;
+    }
+
+    // If the direct stream fails (common with Drive), switch to iframe preview.
+    playerDirect.onerror = () => {
+        playerDirect.style.display = "none";
+        player.style.display = "block";
+        player.src = iframeUrl;
+    };
+
     fallback.style.display = "none";
 
     updateUI();
@@ -204,8 +256,8 @@ document.getElementById("nextButton").addEventListener("click", () => {
 /* =========================
    CLICKABLE TITLE
 ========================= */
-titleEl.addEventListener("click", () => {
-    window.location.href = `index.html?id=${series.id}`;
+seriesTitleEl.addEventListener("click", () => {
+    window.location.href = `season1.html?id=${series.id}`;
 });
 
 /* =========================
@@ -264,7 +316,7 @@ if (episodes.length > 0) {
         loadEpisode(0, false);
     }
 } else {
-    titleEl.textContent = "No episodes found";
+    episodeTitleEl.textContent = "No episodes found";
 }
 
 /* =========================
@@ -293,6 +345,10 @@ if (episodes.length > 0) {
    AUTO MARK ON PLAY
 ========================= */
 player.addEventListener("play", () => {
+    markWatched(series.id);
+});
+
+playerDirect.addEventListener("play", () => {
     markWatched(series.id);
 });
 </script>
