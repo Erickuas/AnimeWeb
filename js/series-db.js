@@ -27,7 +27,7 @@ const seriesDatabase = [
             // Google Drive video IDs for each episode
             videoIds: {
                 jp: [
-                    '1KkeJqr86aGD2JN8JfVC80_HlEmHvKFTV',
+                    '1b7c-olJEuv4lvU7mSUpXTaktTzDpyzGS',
                     '1B1pHtoaWPXQkA-yNC7-fi4KgllM9zFZq',
                     '1gW1w17A72XVJSA0Sazow4iXhkcAf5fRI',
                     '1Pip1cf53zTAn2dzOMqUSl3osXz6kfUt4',
@@ -43,18 +43,18 @@ const seriesDatabase = [
                 ],
                 en: [
                     '1LYcE99xAYj6LQTKsBHdOXa-HrwKEpVn4',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    '',
-                    ''
+                    '1bc2GM7QH8vbKY9UxTJXGD4hwmHIl58ux',
+                    '1PfoUd39qzUzcQ6lJUaaaSYjhEuTicyrq',
+                    '1PJ5jMfLV2xsxHzBuYJcSQsJlbqHrzc2B',
+                    '1Dz9u1tlvt1DC_I4VhqyteeVag8-tKaB0',
+                    '12uQudQLM3yDK0YLgGj3HCAK-rSDYcTm0',
+                    '17GIMjmmbOPENNnYNtI_e6Lzv4J9YG9ql',
+                    '1uOMJaxSeGONOpKZ7gybQRkQDKBJ5BIY5',
+                    '1olok0-CxADoe27McLvyYn1aRQkuZrFon',
+                    '1OemhuMzgQvArbWvtZtzFJA_ELnJfqxLZ',
+                    '1isOvxvtJ8kuL4P9ieuOqCmyVIIqZp9-y',
+                    '1Xfemsbza_jN0Z1acr_sE58o7zHXJNLSV',
+                    '1kxrWk42uwgOwlVRN6L-yPhaaK2kHYi9g'
                 ]
             }
             ,
