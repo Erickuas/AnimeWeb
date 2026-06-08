@@ -5,372 +5,483 @@ const seriesDatabase = [
         subtitle: 'Call of the Night',
         year: '2022',
         cover: 'images/call-of-the-night.svg',
-        description: 'A moody supernatural romance about a boy who becomes drawn into the night and vampire world. He meets a mysterious girl who only comes alive after sunset and discovers a new life under Tokyo’s neon midnight sky.',
+        description: 'A moody supernatural romance about a boy who becomes drawn into the night and vampire world.',
         season: {
-            title: 'Season 1',
-            episodeCount: 13,
+        title: 'Season 1',
+        episodeCount: 13,
+        episodes: [
+            'Night Flight',
+            'Do You Do Line?',
+            'A Lot Came Out',
+            'Isn’t This a Tight Squeeze?',
+            'Well, That’s a Problem',
+            'Might As Well Have Fun',
+            'Reproduce',
+            'All of Us',
+            'No Fair',
+            'Enlarge the Peeping-Tom Photos',
+            'Do You Know What a Vampire Is?',
+            'My Mom’s Out Tonight',
+            'Call of the Night'
+        ],
+        videoIds: {
+            jp: [
+                'https://1drv.ms/v/c/570b65251256e48d/IQRnv5G6TusZRZeqneEcdXHZAfgU7jdthl6o-scrIgJRfkw?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQRbyCdjshgGRokpHjq2x1OdAfRsgpiMH5y-hJGnLY2yiu8?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQTQDcy6U77zTpPR1GqjM8wsAdEmhdNji1sliA6Lc7QpT3Q?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQSyti-0ytdaTr3Wjb8z2-eFAcOixB-pPGStrYuQkvT0CsM?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQQhaRjMNWvmTKWluMoDM_W_AXl11pOUh4SqiSC0WhXEJrQ?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQRU7Yu9UfJDT5sqTWhHCYxYAWcd4ydjo0jQhgiZzShMk6o?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQQh5WWWWiTsQKBraXhc_BGrAX-8QqXohQuu2eUNd28h7r4?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQSV5oriUgekTLEO5BsNpBE3AX5hI8gtH69bV5Ao_jMDrmg?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQRUJ_FjPh7YSJF3o-YcceeJAR0ZNfetWrj9gcz4KztlNHs?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQRBbVZXubz4QbHbj3HsDzzdAVCei_QedhtPBlxUZrq2vTo?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQR3pON1ibmBSroB347UX0dYAZx17IzIbLeRlZpLZOdc3Is?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQQDbqP-KAfFT6if2khRHvK4AeXNmMOB_r5E2K42QeFk00A?width=1280&height=720',
+                'https://1drv.ms/v/c/570b65251256e48d/IQSU2aKmDNIySb4Fhy_qTg_DAVxJ1zGsQyyK3XetXrqtEEg?width=1280&height=720'
+            ],
+            en: [
+                '', '', '', '', '', '', '', '', '', '', '', '', ''
+            ]
+        }
+    }
+        },
+
+    {
+        id: 'call-of-the-night-s02',
+        title: 'Yofukashi no Uta',
+        subtitle: 'Call of the Night',
+        year: '2024',
+        cover: 'images/call-of-the-night-s2.svg',
+        season: {
+            title: 'Season 2',
+            episodeCount: 12,
             episodes: [
-                'Night Flight',
-                'Do You Do Line?',
-                'A Lot Came Out',
-                'Isn’t This a Tight Squeeze?',
-                'Well, That’s a Problem',
-                'Might as Well Have Fun',
-                'Reproduce',
-                'All of Us',
-                'No Fair',
-                'Enlarge the Peeping-Tom Photos',
-                'Do You Know What a Vampire Is?',
-                'My Mom’s Out Tonight',
+                'That Time’s Not for Us',
+                'I’ve Been Looking for You',
+                'There Aren’t Any Ghosts in a Haunted House.',
+                'Do You Want To Be Able to Run?',
+                'The Few Years I Spent With You...',
+                'I’m Not Asking About the Quality.',
+                'You’re Too Stupid for That.',
+                'You’re the First, Senpai.',
+                'Yamori-kun, What Do You Want to Do?',
+                'I Wanted It to Be You.',
+                'Mwah...',
                 'Call of the Night'
             ],
-            // Google Drive video IDs for each episode
             videoIds: {
                 jp: [
-                    '1b7c-olJEuv4lvU7mSUpXTaktTzDpyzGS',
-                    '1B1pHtoaWPXQkA-yNC7-fi4KgllM9zFZq',
-                    '1gW1w17A72XVJSA0Sazow4iXhkcAf5fRI',
-                    '1Pip1cf53zTAn2dzOMqUSl3osXz6kfUt4',
-                    '1iu4jL8QnAAgXnaqaKroXVi1U0XbpAHd8',
-                    '1eWxh1awKYF374ftHuyfyEVyH5OOTB3zk',
-                    '1t2a1rSwutxXm362wo7yiMjT-KfCClE55',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQSa2XbNDquzSaxKbEVk7hS4Aa3qwbGyriCwscPmrZr1eLA?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQTkreKCrASBQJA0uybxbGYoAb0a6yL0pYHNZjpFwoMJPxM?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQRj7YCvycvHToQVIM656qBtAUgfeOkLhkNPydAAFdlg9h0?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQS78qu_nopRSrVRm3C_q3sQAemv1Mmp1XMrtsyy7vVUuyg?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQQR9X4SASNOTpJFY-axYLLwAQVu2XExKQj554L_EW6DeEI?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQT0bRHtAbEiSISRaBjGNH5mAUdG56ofFEuo7LZV5jLaIcI?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQRvgFy3wYQERa5io6qtJhxvAVGXLEAPKRPu6ZUtWzRyQ8M?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQQnvmSiI2GeSqdhbZsjKYLlAQGmT7alqPVNTWsft1kvX5s?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQQl3XReF0_SS61b_yG19R8pAUYDuIYjd6trHz597H1ISRA?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQSzuo8e4caXSLJ18yYeXsNPAUo01eBhJlezLGNGRWuP8JQ?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQSyosAViPvBQLZ_2OXjDWYnAepaP0hSz-eknOkr6Pzum8w?width=1280&height=720',
+                    'https://1drv.ms/v/c/570b65251256e48d/IQTqFDbJWf8LQ7rCPxkAZYruARbQMHXRKzP9cDixzPJaPfI?width=1280&height=720'
+                ],
+                en: [
+                    '',
+                    '',
+                    '',
+                    '',
+                    '',
+                    '',
                     '',
                     '',
                     '',
                     '',
                     '',
                     ''
-                ],
-                en: [
-                    '1LYcE99xAYj6LQTKsBHdOXa-HrwKEpVn4',
-                    '1bc2GM7QH8vbKY9UxTJXGD4hwmHIl58ux',
-                    '1PfoUd39qzUzcQ6lJUaaaSYjhEuTicyrq',
-                    '1PJ5jMfLV2xsxHzBuYJcSQsJlbqHrzc2B',
-                    '1Dz9u1tlvt1DC_I4VhqyteeVag8-tKaB0',
-                    '12uQudQLM3yDK0YLgGj3HCAK-rSDYcTm0',
-                    '17GIMjmmbOPENNnYNtI_e6Lzv4J9YG9ql',
-                    '1uOMJaxSeGONOpKZ7gybQRkQDKBJ5BIY5',
-                    '1olok0-CxADoe27McLvyYn1aRQkuZrFon',
-                    '1OemhuMzgQvArbWvtZtzFJA_ELnJfqxLZ',
-                    '1isOvxvtJ8kuL4P9ieuOqCmyVIIqZp9-y',
-                    '1Xfemsbza_jN0Z1acr_sE58o7zHXJNLSV',
-                    '1kxrWk42uwgOwlVRN6L-yPhaaK2kHYi9g'
                 ]
             }
-            ,
-            // actual filenames (without extension). English files have an extra " (1)" suffix.
-            fileNames: [
-                'Call of the Night - S01E01 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E02 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E03 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E04 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E05 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E06 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E07 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E08 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E09 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E10 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E11 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E12 1080p WEBRip Dual-Audio AV1-DBMS',
-                'Call of the Night - S01E13 1080p WEBRip Dual-Audio AV1-DBMS'
-            ]
-        },
-        seasonFolder: 'Anime/Yofukashi-no-uta/Call of the Night - S01 1080p WEBRip Dual-Audio AV1-DBMS',
-        playerPage: 'player.html',
-        seasonPage: 'season1.html'
-        ,
-        anilistTitle: 'Yofukashi no Uta'
+        }
+    },
+
+    {
+        id: 'eminence-in-shadow',
+        title: 'Kage no Jitsuryokusha ni Naritakute!',
+        subtitle: 'The Eminence in Shadow',
+        year: '2022',
+        cover: 'images/eminence-in-shadow.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 20,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5',
+                'Ep 6','Ep 7','Ep 8','Ep 9','Ep 10',
+                'Ep 11','Ep 12','Ep 13','Ep 14','Ep 15',
+                'Ep 16','Ep 17','Ep 18','Ep 19','Ep 20'
+            ],
+            videoIds: {
+                jp: [
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+
+                     '',
+                      '',
+                       '',
+                        '',
+                         '',
+
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+
+                    '',
+                     '',
+                      '',
+                       '',
+                        ''
+                ],
+                en: [
+                        'https://1drv.ms/v/c/570b65251256e48d/IQRzioBtAGx2SoO5iCxOwNpwASuVEGYtH69rizipu5ps_Fs?width=1920&height=1080',
+                     'https://1drv.ms/v/c/570b65251256e48d/IQTsImQ9i1WCRKo5bZJnXE6YAQa_GCI1yE7R4-IJNbybD20?width=1920&height=1080',
+                      'https://1drv.ms/v/c/570b65251256e48d/IQQ8xnKKmXmpSZ0_LuceHML3Ad7KYP5afeTiLTg2eVeEV0w?width=1920&height=1080',
+                       'https://1drv.ms/v/c/570b65251256e48d/IQTOVscnIJhPT4rVwCMxm1Z0AYmWfcTfrtTtzTDc6bkRxsM?width=1920&height=1080',
+                        'https://1drv.ms/v/c/570b65251256e48d/IQQ3MjoCXdA4SZ8nn4YDQ_yMATCRtLP1Yt6GRRQEyqVMbpw?width=1920&height=1080',
+
+                     'https://1drv.ms/v/c/570b65251256e48d/IQQk7ubeQCcNRaCpNUA5LFWgAaVvjkR97NfuAdJ_5mK-QZQ?width=1920&height=1080',
+                      'https://1drv.ms/v/c/570b65251256e48d/IQRApPJkcFROTYQ5roOG8vpyAYZM6phBMzxDDjd3f-RiCok?width=1920&height=1080',
+                       'https://1drv.ms/v/c/570b65251256e48d/IQT7Sv8Oxe9ST4FJpdKvBO04AccfxXNghetb9RjQFYPWFgo?width=1920&height=1080',
+                        'https://1drv.ms/v/c/570b65251256e48d/IQSFeiCXmZEIR6Helj9VTaSpAf4wsD9VRLb9v6aqwvLUE_M?width=1920&height=1080',
+                         'https://1drv.ms/v/c/570b65251256e48d/IQQq1REwWqUtR7RyBsOITMn9ARng8NGIyHo71n0-BqfxdyI?width=1920&height=1080',
+
+                    'https://1drv.ms/v/c/570b65251256e48d/IQTAcEDGvSUbSJsu0uUXRcQyAV9MYqf9PbebS6VFt4x8PAc?width=1920&height=1080',
+                     'https://1drv.ms/v/c/570b65251256e48d/IQQa6CUFmTOTTKvoC7Myz93OAQ1aI2LqsreMO672UZ33ct0?width=1920&height=1080',
+                      'https://1drv.ms/v/c/570b65251256e48d/IQQqQEzCj0GlSpowoiCQF8EiASEGszX4mUD77lGfBw1jRBc?width=1920&height=1080',
+                       'https://1drv.ms/v/c/570b65251256e48d/IQTIEp35R98iR52j480Dj97pATXp0BlrwXmnNUNYx4z8oXw?width=1920&height=1080',
+                        'https://1drv.ms/v/c/570b65251256e48d/IQQosPJcvJ_yQKNpfisQgZ5ZAZt-kkBdYA7ZVrc7aicDC9Y?width=1920&height=1080',
+
+                    'https://1drv.ms/v/c/570b65251256e48d/IQQHlDWZWb4qRpgOGIjpFwAUAUHoTmHlA-wy9QSGil7gqDw?width=1920&height=1080',
+                     'https://1drv.ms/v/c/570b65251256e48d/IQQ9JW3wdnL_Sa0CfDFRuUAKASoHXDPkih6r5jShzRb7Xu4?width=1920&height=1080',
+                      'https://1drv.ms/v/c/570b65251256e48d/IQRiheLUbbD8RruomLKejUgFAUdgJJRiKJU45mWTvA2tBfg?width=1920&height=1080',
+                       'https://1drv.ms/v/c/570b65251256e48d/IQS9wSdJY2W9TKczC_6DNNmsAamx94YIOIn1MFCtBeE1d38?width=1920&height=1080',
+                        'https://1drv.ms/v/c/570b65251256e48d/IQTNrda71JPqSZulJYIDd4ohAbqz189qf_yhZamPgvv19oQ?width=1920&height=1080'
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'eminence-in-shadow-s02',
+        title: 'Kage no Jitsuryokusha ni Naritakute!',
+        subtitle: 'The Eminence in Shadow',
+        year: '2023',
+        cover: 'images/eminence-in-shadow-s2.svg',
+        season: {
+            title: 'Season 2',
+            episodeCount: 12,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5','Ep 6',
+                'Ep 7','Ep 8','Ep 9','Ep 10','Ep 11','Ep 12'
+            ],
+            videoIds: {
+                jp: [
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+                         '',
+
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+                         '',
+                         '',
+                         '',
+                         '',
+                         '',
+                ],
+                en: [
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+                         '',
+
+                    '',
+                     '',
+                      '',
+                       '',
+                        '',
+                         '',
+                         '',
+                         '',
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'my-dress-up-darling',
+        title: 'Sono Bisque Doll wa Koi wo Suru',
+        subtitle: 'My Dress-Up Darling',
+        year: '2022',
+        cover: 'images/my-dress-up-darling.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 12,
+            episodes: [
+                'Someone Who Lives in the Exact Opposite World as Me',
+                'Wanna Hurry Up, and Do It?',
+                'Then Why Don\'t We?',
+                'Are These Your Girlfriend\'s?',
+                'It\'s Probably Because This Is the Best Boob Bag Here',
+                'For Real?!',
+                'A Home Date with the Guy I Wuv Is the Best',
+                'Backlighting Is the Best',
+                'A Lot Happened After I Saw That Photo',
+                'We\'ve All Got Struggles',
+                'I Am Currently at a Love Hotel',
+                'My Dress-Up Darling'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'my-dress-up-darling-s02',
+        title: 'Sono Bisque Doll wa Koi wo Suru',
+        subtitle: 'My Dress-Up Darling',
+        year: '2025',
+        cover: 'images/my-dress-up-darling-s2.svg',
+        season: {
+            title: 'Season 2',
+            episodeCount: 12,
+            episodes: [
+                'Wakana Gojo, 15 Years Old, Teenager','You Can Equip Boobs','I Wuuuuv Slice-of-Life Scenes! ♡♡♡','Has All My Measurements Memorized','800 Million','I’ll Make It Happen, No Matter What with These Two Hands',
+                'Capture Those Delicious Memories!','The Only Way I Can Think of to Express That Gratitude Is with Money','Because I Don’t Intend to Sleep Tonight','So We’re Gonna Do It All Right Now?!','I Didn’t Think Anything Good Would Ever Happen to Me','Dear My Dress-Up Darling'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'tokyo-mew-mew',
+        title: 'Tokyo Mew Mew',
+        subtitle: '',
+        year: '2002',
+        cover: 'images/tokyo-mew-mew.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 52,
+            episodes: Array.from({ length: 52 }, (_, i) => `Episode ${i + 1}`),
+            videoIds: {
+                jp: Array(52).fill('')
+            }
+        }
+    },
+
+    {
+        id: 'tokyo-mew-mew-new',
+        title: 'Tokyo Mew Mew New',
+        subtitle: '',
+        year: '2022–2023',
+        cover: 'images/tokyo-mew-mew-new.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 24,
+            episodes: Array.from({ length: 24 }, (_, i) => `Episode ${i + 1}`),
+            videoIds: {
+                jp: Array(24).fill('')
+            }
+        }
+    },
+
+    {
+        id: 'smoking-supermarket',
+        title: 'Super no Ura de Yani Suu Futari',
+        subtitle: 'Smoking Behind the Supermarket with You',
+        year: '2026',
+        cover: 'images/smoking.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 12,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5','Ep 6',
+                'Ep 7','Ep 8','Ep 9','Ep 10','Ep 11','Ep 12'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'second-prettiest-girl',
+        title: 'Class de 2-banme ni Kawaii Onnanoko',
+        subtitle: 'I Made Friends with the Second Prettiest Girl in My Class',
+        year: '2026',
+        cover: 'images/second-girl.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 12,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5','Ep 6',
+                'Ep 7','Ep 8','Ep 9','Ep 10','Ep 11','Ep 12'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', ''
+                ]
+            }
+        }
+    },
+
+    // ================= RASCAL SERIES =================
+
+    {
+        id: 'rascal-bunny-girl-senpai',
+        title: 'Rascal Does Not Dream of Bunny Girl Senpai',
+        subtitle: 'TV',
+        year: '2018',
+        cover: 'images/rascal1.svg',
+        season: {
+            title: 'Season 1',
+            episodeCount: 13,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5','Ep 6',
+                'Ep 7','Ep 8','Ep 9','Ep 10','Ep 11','Ep 12','Ep 13'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', '',
+                    ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', '',
+                    ''
+                ]
+            }
+        }
+    },
+
+    {
+        id: 'rascal-dreaming-girl',
+        title: 'Rascal Does Not Dream of a Dreaming Girl',
+        subtitle: 'Movie',
+        year: '2019',
+        cover: 'images/rascal2.svg',
+        season: {
+            title: 'Movie',
+            episodeCount: 1,
+            episodes: ['Movie'],
+            videoIds: {
+                jp: [''],
+                en: ['']
+            }
+        }
+    },
+
+    {
+        id: 'rascal-sister-venturing-out',
+        title: 'Rascal Does Not Dream of a Sister Venturing Out',
+        subtitle: 'Movie',
+        year: '2023',
+        cover: 'images/rascal3.svg',
+        season: {
+            title: 'Movie',
+            episodeCount: 1,
+            episodes: ['Movie'],
+            videoIds: {
+                jp: [''],
+                en: ['']
+            }
+        }
+    },
+
+    {
+        id: 'rascal-knapsack-kid',
+        title: 'Rascal Does Not Dream of a Knapsack Kid',
+        subtitle: 'Movie',
+        year: '2023',
+        cover: 'images/rascal4.svg',
+        season: {
+            title: 'Movie',
+            episodeCount: 1,
+            episodes: ['Movie'],
+            videoIds: {
+                jp: [''],
+                en: ['']
+            }
+        }
+    },
+
+    {
+        id: 'rascal-santa-claus',
+        title: 'Rascal Does Not Dream of Santa Claus',
+        subtitle: 'TV',
+        year: '2025',
+        cover: 'images/rascal5.svg',
+        season: {
+            title: 'Season 2',
+            episodeCount: 13,
+            episodes: [
+                'Ep 1','Ep 2','Ep 3','Ep 4','Ep 5','Ep 6',
+                'Ep 7','Ep 8','Ep 9','Ep 10','Ep 11','Ep 12','Ep 13'
+            ],
+            videoIds: {
+                jp: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', '',
+                    ''
+                ],
+                en: [
+                    '', '', '', '', '', '',
+                    '', '', '', '', '', '',
+                    ''
+                ]
+            }
+        }
     }
 ];
-
-// Season 2 entry
-seriesDatabase.push({
-    id: 'call-of-the-night-s02',
-    title: 'Yofukashi no Uta',
-    subtitle: 'Call of the Night',
-    year: '2024',
-    cover: 'images/call-of-the-night-s2.svg',
-    description: 'Season 2 of Yofukashi no Uta.',
-    season: {
-        title: 'Season 2',
-        episodeCount: 12,
-        episodes: [
-            'Call of the Night S02E01',
-            'Call of the Night S02E02',
-            'Call of the Night S02E03',
-            'Call of the Night S02E04',
-            'Call of the Night S02E05',
-            'Call of the Night S02E06',
-            'Call of the Night S02E07',
-            'Call of the Night S02E08',
-            'Call of the Night S02E09',
-            'Call of the Night S02E10',
-            'Call of the Night S02E11',
-            'Call of the Night S02E12'
-        ],
-        // Google Drive video IDs for each episode
-        videoIds: {
-            jp: [
-                '1WPdZnhbQpDcZQiMPiyo2LMFHeaIeqMax',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                ''
-            ],
-            en: [
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                ''
-            ]
-        },
-        // actual filenames (without extension)
-        fileNames: [
-            '[DB]Yofukashi no Uta Season 2_-_01_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_02_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_03_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_04_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_05_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_06_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_07_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_08_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_09_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_10_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_11_(Dual Audio_10bit_BD1080p_x265)',
-            '[DB]Yofukashi no Uta Season 2_-_12_(Dual Audio_10bit_BD1080p_x265)'
-        ]
-    },
-    seasonFolder: 'Anime/Yofukashi-no-uta/Yofukashi no Uta Season 2',
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Yofukashi no Uta Season 2'
-});
-
-seriesDatabase.push({
-    id: 'eminence-in-shadow',
-    title: 'Kage no Jitsuryokusha ni Naritakute!',
-    subtitle: 'The Eminence in Shadow',
-    year: '2022',
-    cover: 'images/eminence-in-shadow.svg',
-    description: 'A boy who has spent his life acting out fantasy scenarios in his head is reborn into a world of magic—and decides to become the power behind the throne as the mysterious figure known only as Shadow.',
-    season: {
-        title: 'Season 1',
-        episodeCount: 20,
-        episodes: [
-            'The Mysterious Fantasy World Crossover',
-            'Establishing an Identity for the Secret Organization',
-            'Cats, Villains, and the Greedy Fox',
-            'When the Going Gets Tough...',
-            'Shadow the Magnificent, Mary the Wonderful',
-            'Once You\'ve Ruled Out the Impossible...',
-            'The Feast Begins!',
-            'The False Bride Sneaks In!',
-            'The Garden of Red Roses Will Bloom at Night',
-            'Exploding! Hyper-Ultra Ultimate Growth!!!',
-            'The Enemy Was Called \'Terror\'',
-            'The Goddess of Rebellion and the Demon Beasts',
-            'A Bloody Battle, Just for You',
-            'You Who Serve and I Who Rule',
-            'The Cuirassier Rides Forth',
-            'And Yet, It Was Beautiful',
-            'The Nightmare Rises',
-            'Darkness Does Thy Bidding',
-            'Betrayal\'s Blade Moans at Twilight',
-            'The Shadows Rally in Twilight'
-        ],
-        videoIds: {
-            jp: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
-            en: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Kage no Jitsuryokusha ni Naritakute!'
-});
-
-seriesDatabase.push({
-    id: 'eminence-in-shadow-s02',
-    title: 'Kage no Jitsuryokusha ni Naritakute!',
-    subtitle: 'The Eminence in Shadow',
-    year: '2023',
-    cover: 'images/eminence-in-shadow-s2.svg',
-    description: 'Shadow and his organization face new enemies as the secrets of the world—and his own legend—grow ever larger.',
-    season: {
-        title: 'Season 2',
-        episodeCount: 12,
-        episodes: [
-            'A Spotlight, However Brief, Is Still Meaningful',
-            'The Mad Dog Rages',
-            'Betrayal Has Many Faces',
-            'An Ecstatic Moment of Love and Grave Remembrance',
-            'They Are Humiliation and Conviction, Resentment and Despair...',
-            'Before the Battle, the Magical Girl Always Stands at the Ready and Waits',
-            'The End of a Myth',
-            'What Is Inherited, and What Should Be Left Behind',
-            'Gotta Go Fast, Serious Mode',
-            'The Battle of Morning Star',
-            'The Greatest of All Time',
-            'The Eminence in Shadow'
-        ],
-        videoIds: {
-            jp: ['', '', '', '', '', '', '', '', '', '', '', ''],
-            en: ['', '', '', '', '', '', '', '', '', '', '', '']
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Kage no Jitsuryokusha ni Naritakute! 2nd Season'
-});
-
-seriesDatabase.push({
-    id: 'my-dress-up-darling',
-    title: 'Sono Bisque Doll wa Koi wo Suru',
-    subtitle: 'My Dress-Up Darling',
-    year: '2022',
-    cover: 'images/my-dress-up-darling.svg',
-    description: 'Shy hina doll craftsman Wakana Gojo teams up with outgoing classmate Marin Kitagawa, who loves cosplay—and slowly draws him out of his shell.',
-    season: {
-        title: 'Season 1',
-        episodeCount: 12,
-        episodes: [
-            'Someone Who Lives in the Exact Opposite World as Me',
-            'Wanna Hurry Up, and Do It?',
-            'Then Why Don\'t We?',
-            'Are These Your Girlfriend\'s?',
-            'It\'s Probably Because This Is the Best Boob Bag Here',
-            'For Real?!',
-            'A Home Date with the Guy I Wuv Is the Best',
-            'Backlighting Is the Best',
-            'A Lot Happened After I Saw That Photo',
-            'We\'ve All Got Struggles',
-            'I Am Currently at a Love Hotel',
-            'My Dress-Up Darling'
-        ],
-        videoIds: {
-            jp: Array(12).fill(''),
-            en: Array(12).fill('')
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Sono Bisque Doll wa Koi wo Suru'
-});
-
-seriesDatabase.push({
-    id: 'my-dress-up-darling-s02',
-    title: 'Sono Bisque Doll wa Koi wo Suru',
-    subtitle: 'My Dress-Up Darling',
-    year: '2025',
-    cover: 'images/my-dress-up-darling-s2.svg',
-    description: 'Marin and Gojo dive into new cosplays, friendships, and feelings as their partnership—and romance—deepens.',
-    season: {
-        title: 'Season 2',
-        episodeCount: 12,
-        episodes: [
-            'Wakana Gojo, 15 Years Old, Teenager',
-            'You Can Equip Boobs',
-            'I Wuuuuv Slice-of-Life Scenes!',
-            'Has All My Measurements Memorized',
-            '800 Million',
-            'I\'ll Make It Happen, No Matter What with These Two Hands',
-            'Capture Those Delicious Memories!',
-            'The Only Way I Can Think of to Express That Gratitude Is with Money',
-            'Because I Don\'t Intend to Sleep Tonight',
-            'So We\'re Gonna Do It All Right Now?!',
-            'I Didn\'t Think Anything Good Would Ever Happen to Me',
-            'Dear My Dress-Up Darling'
-        ],
-        videoIds: {
-            jp: Array(12).fill(''),
-            en: Array(12).fill('')
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Sono Bisque Doll wa Koi wo Suru Season 2'
-});
-
-seriesDatabase.push({
-    id: 'tokyo-mew-mew',
-    title: 'Tokyo Mew Mew',
-    subtitle: 'Tokyo Mew Mew',
-    year: '2002',
-    cover: 'images/tokyo-mew-mew.svg',
-    description: 'Five ordinary girls gain the power of endangered animals to fight aliens as the magical team Tokyo Mew Mew.',
-    season: {
-        title: 'Season 1',
-        episodeCount: 52,
-        episodes: Array.from({ length: 52 }, (_, i) => `Episode ${i + 1}`),
-        videoIds: {
-            jp: Array(52).fill(''),
-            en: Array(52).fill('')
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Tokyo Mew Mew'
-});
-
-seriesDatabase.push({
-    id: 'tokyo-mew-mew-new',
-    title: 'Tokyo Mew Mew New',
-    subtitle: 'Tokyo Mew Mew New',
-    year: '2022–2023',
-    cover: 'images/tokyo-mew-mew-new.svg',
-    description: 'Ichigo Momomiya and four other girls become magical defenders of Earth in this reboot—across two seasons of the beloved magical girl series.',
-    season: {
-        title: 'Season 1',
-        episodeCount: 24,
-        episodes: [
-            'Wait, What?! I\'m a Superhero Now?! Meow!',
-            'What Makes a Real Friend?',
-            'A Stolen Kiss?! Mew Pudding is Here!',
-            'Who Doesn\'t Want to Be Her? Our Last Member is a Huge Star!',
-            'Smile, Mint! A Fancy Lady, Forlorn',
-            'Hear My Voice! I Will Surpass Myself',
-            'Farewell Cherry Blossom',
-            'Believe In Yourself - Romance on the High Seas',
-            'Let Cupid\'s Arrow Fly! The Super Secret Date Scheme!',
-            'Cat Got My Tongue?! A Heart-Pounding Transformation!',
-            'Everyone\'s Waiting For You! Run, Ichigo!',
-            'Rain & Tears',
-            'Step Up! Ichigo\'s Romance Enters the Next Stage!',
-            'Mint, the Runaway?! I\'m Going to Change the World!',
-            'Hi Mom, It\'s Purin! I\'m Doing Great!',
-            'Droplets of Love',
-            'Music Video Madness. When Two Prodigies Clash!',
-            'His Hidden Resolve / The Birth of the Mew Project',
-            'My Future Starts Now: This is the Real Me',
-            'Kish and the Blue Knight',
-            'Deep Blue',
-            'Scattered Hearts and a Tearful Night',
-            'Hear Our Cry! The Final Battle!',
-            'The Future We Build Together'
-        ],
-        videoIds: {
-            jp: Array(24).fill(''),
-            en: Array(24).fill('')
-        }
-    },
-    playerPage: 'player.html',
-    seasonPage: 'season1.html',
-    anilistTitle: 'Tokyo Mew Mew New'
-});
 
 function getAllSeries() {
     return seriesDatabase;
@@ -384,11 +495,7 @@ function getRelatedSeries(id) {
     const current = getSeriesById(id);
     if (!current) return [];
     if (Array.isArray(current.relatedIds) && current.relatedIds.length) {
-        return current.relatedIds
-            .map(relatedId => getSeriesById(relatedId))
-            .filter(Boolean);
+        return current.relatedIds.map(getSeriesById).filter(Boolean);
     }
-    return seriesDatabase.filter(
-        s => s.id !== id && s.title === current.title
-    );
+    return seriesDatabase.filter(s => s.id !== id && s.title === current.title);
 }

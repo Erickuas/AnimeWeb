@@ -93,7 +93,7 @@ const relatedSeriesList = document.getElementById("relatedSeriesList");
    BASE DATA (LOCAL FIRST)
 ========================= */
 titleEl.textContent = series.title;
-playerLink.href = `${series.playerPage}?id=${series.id}`;
+playerLink.href = `player.html?id=${series.id}`;
 
 if (series.cover) {
     coverEl.src = series.cover;

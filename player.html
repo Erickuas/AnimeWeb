@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player - Media DB</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link class="styles" rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -47,9 +47,9 @@
                 <iframe id="videoPlayer" class="player-video" style="border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <video id="videoPlayerDirect" class="player-video" style="display:none;background:#000" controls playsinline></video>
 
-                <div id="playerFallback" style="display:none">
+                <div id="playerFallback" style="display:none; color: #fff; padding: 20px; text-align: center;">
                     <span>Unable to load video.</span>
-                    <a id="externalLink" href="#" target="_blank">Open on Google Drive</a>
+                    <a id="externalLink" href="#" target="_blank" style="color: #3498db; text-decoration: underline;">Open on OneDrive</a>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ const episodeTitleEl = document.getElementById("episodeTitle");
 const listEl = document.getElementById("videoList");
 
 const displayName = series.subtitle || series.title;
-const seasonPageUrl = `${series.seasonPage}?id=${series.id}`;
+const seasonPageUrl = `season1.html?id=${series.id}`;
 seriesPosterLink.href = seasonPageUrl;
 seriesPosterEl.src = series.cover || "";
 seriesPosterEl.alt = displayName;
@@ -124,26 +124,49 @@ const fallback = document.getElementById("playerFallback");
 const languageSelect = document.getElementById("languageSelect");
 
 /* =========================
-   BUILD GOOGLE DRIVE URLS
+   CLEAN & EXTRACT ONEDRIVE ID
+========================= */
+function extractOneDriveId(inputString) {
+    if (!inputString) return "";
+    
+    if (inputString.includes('/v/c/')) {
+        try {
+            let cleanPart = inputString.split('/v/c/')[1];
+            if (cleanPart.includes('?')) {
+                cleanPart = cleanPart.split('?')[0];
+            }
+            return cleanPart;
+        } catch (e) {
+            console.error("Failed parsing OneDrive URL", e);
+            return inputString;
+        }
+    }
+    
+    return inputString;
+}
+
+/* =========================
+   BUILD ONEDRIVE URLS (FIXED)
 ========================= */
 function buildIframeUrl(index) {
-    const videoId = videoIds[currentLanguage]?.[index];
+    const rawId = videoIds[currentLanguage]?.[index];
+    const videoId = extractOneDriveId(rawId);
     if (!videoId) return "";
     
-    return `https://drive.google.com/file/d/${videoId}/preview?autoplay=1`;
+    return `https://1drv.ms/v/c/${videoId}`;
 }
 
 function buildDirectUrl(index) {
-    const videoId = videoIds[currentLanguage]?.[index];
-    if (!videoId) return "";
-    // Attempt direct stream (may be blocked by Drive depending on permissions / size)
-    return `https://drive.google.com/uc?export=download&id=${videoId}`;
+    // Setting this empty prevents direct video streaming blocks from OneDrive 
+    // and naturally drops back to the working iframe player.
+    return ""; 
 }
 
 function buildDriveViewUrl(index) {
-    const videoId = videoIds[currentLanguage]?.[index];
+    const rawId = videoIds[currentLanguage]?.[index];
+    const videoId = extractOneDriveId(rawId);
     if (!videoId) return "";
-    return `https://drive.google.com/file/d/${videoId}/view`;
+    return `https://1drv.ms/v/c/${videoId}`;
 }
 
 /* =========================
@@ -151,9 +174,7 @@ function buildDriveViewUrl(index) {
 ========================= */
 function loadEpisode(index, autoplay = true) {
     activeIndex = index;
-
     const ep = episodes[index];
-
     if (!ep) return;
 
     episodeTitleEl.textContent = ep;
@@ -169,11 +190,11 @@ function loadEpisode(index, autoplay = true) {
         return;
     }
 
-    // Prefer direct <video> first; if it errors, fall back to iframe preview.
     fallback.style.display = "none";
+    externalLink.textContent = "Open on OneDrive";
     externalLink.href = viewUrl || iframeUrl;
 
-    // Reset both players to avoid audio overlap / stale loads
+    // Reset both players
     player.src = "";
     playerDirect.pause();
     playerDirect.removeAttribute("src");
@@ -187,7 +208,7 @@ function loadEpisode(index, autoplay = true) {
 
         if (autoplay) {
             playerDirect.play().catch(() => {
-                // Autoplay may be blocked; user can press play.
+                // Handle blocked autoplay
             });
         }
     } else {
@@ -196,14 +217,11 @@ function loadEpisode(index, autoplay = true) {
         player.src = iframeUrl;
     }
 
-    // If the direct stream fails (common with Drive), switch to iframe preview.
     playerDirect.onerror = () => {
         playerDirect.style.display = "none";
         player.style.display = "block";
         player.src = iframeUrl;
     };
-
-    fallback.style.display = "none";
 
     updateUI();
 }
@@ -239,11 +257,9 @@ function updateUI() {
             el.classList.toggle("active", i === activeIndex);
         });
     
-    // Update episode counter
     const counter = document.getElementById("episodeCounter");
     counter.textContent = `${activeIndex + 1} / ${episodes.length}`;
     
-    // Update button states
     const prevBtn = document.getElementById("prevButton");
     const nextBtn = document.getElementById("nextButton");
     prevBtn.disabled = activeIndex === 0;
@@ -282,8 +298,6 @@ languageSelect.addEventListener("change", (e) => {
     loadEpisode(activeIndex, false);
 });
 
-
-
 /* =========================
    RECENT WATCHED
 ========================= */
@@ -309,7 +323,7 @@ function markWatched(id) {
    INIT
 ========================= */
 renderEpisodes();
-// check hash for initial episode (e.g. #ep=2)
+
 function getEpisodeFromHash() {
     const h = location.hash.replace('#', '');
     if (!h) return null;
@@ -347,10 +361,7 @@ if (episodes.length > 0) {
             seriesPosterEl.src = data.coverImage.large;
         }
 
-        const enrichedTitle =
-            data.title?.english ||
-            data.title?.romaji ||
-            displayName;
+        const enrichedTitle = data.title?.english || data.title?.romaji || displayName;
         seriesTitleBtn.textContent = enrichedTitle;
         seriesPosterEl.alt = enrichedTitle;
 
