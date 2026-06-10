@@ -124,7 +124,7 @@ episodeList.innerHTML = series.season.episodes.map((ep, i) => `
     filtered.unshift({ id: series.id, ts: Date.now() });
     localStorage.setItem("recentlyWatched", JSON.stringify(filtered.slice(0, 10)));
 
-    window.location.href = `${series.playerPage}?id=${series.id}#ep=${idx}`;
+    window.location.href = `player.html?id=${series.id}#ep=${idx}`;
 });
 
 /* =========================
